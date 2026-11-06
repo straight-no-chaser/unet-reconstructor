@@ -1,4 +1,4 @@
-# Cellular electrophysiology signal reconstruction
+# Cellular electrophysiology signal reconstructor
 
 Reconstructor of cellular electrophysiology signal segments with a 1D U-Net-style PyTorch model. Maps extracellular signal windows to paired intracellular signal windows, and predicts action potential duration-width targets from extracellular windows.
 
