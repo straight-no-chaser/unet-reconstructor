@@ -1,0 +1,29 @@
+project:
+  name: signal_reconstruction
+
+data:
+  task: extra_to_intra
+  input_path: data/processed/all_extras.npy
+  target_path: data/processed/all_intras.npy
+  val_size: 0.3
+  sample_rate_hz: 5000
+
+model:
+  input_dim: 1
+  layer_n: 32
+  kernel_size: 7
+  depth: 5
+
+training:
+  batch_size: 32
+  epochs: 30
+  lr: 0.0001
+  weight_decay: 0.00001
+  loss: smooth_l1
+  seed: 42
+  checkpoint_path: checkpoints/ION_train_checkpoint.pt
+  log_path: outputs/metrics/training_log.csv
+  device:
+
+evaluation:
+  output_dir: outputs
